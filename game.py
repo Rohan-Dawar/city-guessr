@@ -75,18 +75,18 @@ def check_answer(guess):
 #Index
 @app.route('/', methods=['POST', 'GET'])
 def index():
-	try:
-	    if request.method == 'POST':
-	        check_answer(request.form['content'])
-	        session['a'] = next(generator)
-	        return render_template('index.html', session=session)
-	    else:
-	    	session['player'] = jsons.dump(PlayerScore())
-		generator = gen(init_praw('cityporn', 10000))
-		session['a'] = next(generator)
-		return render_template('index.html', session=session)
-	except ValueError:
-		pass
+    try:
+        if request.method == 'POST':
+            check_answer(request.form['content'])
+            session['a'] = next(generator)
+            return render_template('index.html', session=session)
+        else:
+            session['player'] = jsons.dump(PlayerScore())
+            generator = gen(init_praw('cityporn', 10000))
+            session['a'] = next(generator)
+            return render_template('index.html', session=session)
+    except ValueError:
+        pass
 
 # Flask RUN:
 if __name__ == "__main__":
