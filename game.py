@@ -91,4 +91,4 @@ def index():
 if __name__ == "__main__":
 	player = jsons.dump(PlayerScore())
 	generator = gen(init_praw('cityporn', 10000))
-	app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
+	app.run()
