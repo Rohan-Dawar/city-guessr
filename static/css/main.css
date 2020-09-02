@@ -1,0 +1,26 @@
+body{
+  font-family: Tahoma, Geneva, sans-serif;
+  background-color: #97bbcd;
+  text-align: center;
+}
+
+.HUD{
+  text-align: center;
+  padding: 20;
+  margin: 100;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 200;
+  margin: 100;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}

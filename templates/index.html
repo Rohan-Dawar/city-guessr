@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <title>Rohan's City Guessing Game</title>
+{% endblock %}
+
+{% block body %}
+
+<center><h1>Rohan's City Guesser</h1></center>
+
+<div class="flashes">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p>{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</div>
+
+<form id="userEntry" action="/" method="post">
+  <input type="text" name="content" id="content">
+  <input type="submit" name="button" value="Guess">
+</form>
+</center>
+
+<center>
+<div class="PictureFrame">
+  <img src="{{ session['a'].img }}" alt="{{session['a'].img}}" width="{{500 * session['a'].imgRatio }}" height="500">
+</div>
+
+<center>
+  <div>
+    <table>
+      <tr class="tableheader">
+        <th class="score">Score</th>
+        <th class="outof">Seen</th>
+        <th class="percent">Percent</th>
+        <th class="cumulative">Consecutive</th>
+        <th class="cumulativehs">Consec HS</th>
+      </tr>
+      <tr>
+        <td>{{ session['player'].amountCorrect }}</td>
+        <td>{{ session['player'].totalEncountered }}</td>
+        {% if session['player'].totalEncountered > 0 %}
+        <td>{{ "{:.2%}".format(session['player'].amountCorrect / session['player'].totalEncountered) }}</td>
+        {% else %}
+        <td>0/0</td>
+        {% endif %}
+        <td>{{ session['player'].cumulativeCorrect }}</td>
+        <td>{{ session['player'].cumulative_HS }}</td>
+      </tr>
+    </table>
+  </div>
+</center>
+
+{% endblock %}
