@@ -83,8 +83,8 @@ def index():
 	    else:
 	    	session['player'] = jsons.dump(PlayerScore())
 		generator = gen(init_praw('cityporn', 10000))
-	    	session['a'] = next(generator)
-	    	return render_template('index.html', session=session)
+		session['a'] = next(generator)
+		return render_template('index.html', session=session)
 	except ValueError:
 		pass
 
