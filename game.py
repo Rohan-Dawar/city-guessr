@@ -5,7 +5,7 @@ from io import BytesIO
 from check_ag_lists import check_name
 from prawKeys import reddit
 import requests, time, secrets, unidecode, jsons
-en_core_web_sm = __import__('spacy.lang.en_core_web_sm')
+import en_core_web_sm
 
 # Flask Init
 app = Flask(__name__)
