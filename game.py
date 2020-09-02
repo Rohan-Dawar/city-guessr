@@ -81,7 +81,7 @@ def index():
 	        session['a'] = next(generator)
 	        return render_template('index.html', session=session)
 	    else:
-	    	session['player'] = player
+	    	session['player'] = jsons.dump(PlayerScore())
 	    	session['a'] = next(generator)
 	    	return render_template('index.html', session=session)
 	except ValueError:
@@ -89,6 +89,6 @@ def index():
 
 # Flask RUN:
 if __name__ == "__main__":
-	player = jsons.dump(PlayerScore())
+# 	player = jsons.dump(PlayerScore())
 	generator = gen(init_praw('cityporn', 10000))
 	app.run()
