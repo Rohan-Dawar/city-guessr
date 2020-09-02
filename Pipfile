@@ -10,10 +10,10 @@ flask = "*"
 requests = "*"
 unidecode = "*"
 jsons = "*"
-spacy = {extras = ["en-core-web-sm"], version = "*"}
 pillow = "*"
 gunicorn = "*"
 praw = "*"
+spacy = "*"
 
 [requires]
 python_version = "3.8"
