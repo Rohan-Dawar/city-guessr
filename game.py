@@ -4,7 +4,8 @@ from PIL import Image
 from io import BytesIO
 from check_ag_lists import check_name
 from prawKeys import reddit
-import requests, en_core_web_sm, time, secrets, unidecode, jsons
+import requests, time, secrets, unidecode, jsons
+en_core_web_sm = __import__('en-core-web-sm')
 
 # Flask Init
 app = Flask(__name__)
