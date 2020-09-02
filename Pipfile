@@ -13,6 +13,7 @@ jsons = "*"
 spacy = "*"
 pillow = "*"
 gunicorn = "*"
+praw = "*"
 
 [requires]
 python_version = "3.8"
