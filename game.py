@@ -77,7 +77,8 @@ def index():
     try:
         if request.method == 'POST':
             check_answer(request.form['content'])
-            session['a'] = next(session['gen'])
+	    nextgen = next(session['gen'])
+            session['a'] = nextgen
             return render_template('index.html', session=session)
         else:
             session['player'] = jsons.dump(PlayerScore())
