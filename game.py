@@ -71,20 +71,21 @@ def check_answer(guess):
 		player['totalEncountered'] += 1
 		flash(f'Incorrect that was {answer[0].title()}\n | Your Answer: {guess.title()}', "info")
 	session['player'] = player
+	
 #Index
 @app.route('/', methods=['POST', 'GET'])
 def index():
     try:
         if request.method == 'POST':
             check_answer(request.form['content'])
-	    nextgen = next(session['gen'])
+            nextgen = next(session['gen'])
             session['a'] = nextgen
             return render_template('index.html', session=session)
         else:
             session['player'] = jsons.dump(PlayerScore())
             nextgen = next(session['gen'])
             session['a'] = nextgen
-        return render_template('index.html', session=session)
+            return render_template('index.html', session=session)
     except ValueError:
         pass
 
