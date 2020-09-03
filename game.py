@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, flash, session
 from PIL import Image
 from io import BytesIO
 from check_ag_lists import check_name
-from prawKeys import reddit
+from prawKeysOG import reddit
 import requests, time, secrets, unidecode, jsons, spacy
 
 # Flask Init
