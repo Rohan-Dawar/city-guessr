@@ -78,12 +78,12 @@ def index():
     try:
         if request.method == 'POST':
             check_answer(request.form['content'])
-            nextgen = next(session['gen'])
+            nextgen = next(generator)
             session['a'] = nextgen
             return render_template('index.html', session=session)
         else:
             session['player'] = jsons.dump(PlayerScore())
-            nextgen = next(session['gen'])
+            nextgen = next(generator)
             session['a'] = nextgen
             return render_template('index.html', session=session)
     except ValueError:
@@ -91,7 +91,5 @@ def index():
 
 # Flask RUN:
 if __name__ == "__main__":
-# 	player = jsons.dump(PlayerScore())
 	generator = gen(init_praw('cityporn', 10000))
-	session['gen'] = generator
 	app.run()
