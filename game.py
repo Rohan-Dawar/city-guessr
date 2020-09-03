@@ -78,12 +78,12 @@ def index():
     try:
         if request.method == 'POST':
             check_answer(request.form['content'])
-            session['a'] = next(generator)
+            session['a'] = next(session['gen'])
             return render_template('index.html', session=session)
         else:
             session['player'] = jsons.dump(PlayerScore())
 #             generator = gen(init_praw('cityporn', 10000))
-            session['a'] = next(generator)
+            session['a'] = next(session['gen'])
             return render_template('index.html', session=session)
     except ValueError:
         pass
@@ -91,5 +91,5 @@ def index():
 # Flask RUN:
 if __name__ == "__main__":
 # 	player = jsons.dump(PlayerScore())
-	generator = gen(init_praw('cityporn', 10000))
+	session['gen'] = gen(init_praw('cityporn', 10000))
 	app.run()
