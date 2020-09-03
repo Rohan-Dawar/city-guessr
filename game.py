@@ -85,7 +85,7 @@ def index():
 #             generator = gen(init_praw('cityporn', 10000))
             session['a'] = next(session['gen'])
             return render_template('index.html', session=session)
-    except ValueError:
+    except (ValueError, KeyError):
         pass
 
 # Flask RUN:
