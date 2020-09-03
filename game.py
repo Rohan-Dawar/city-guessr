@@ -40,7 +40,7 @@ def get_city_name(title):
             if parse.casefold() in city:
                 return city
             else:
-                pass
+                return None
 
 #Pic Generator
 def gen(top_posts):
