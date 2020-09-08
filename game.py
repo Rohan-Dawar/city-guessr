@@ -9,6 +9,7 @@ import requests, time, secrets, unidecode, jsons, spacy
 # Flask Init
 app = Flask(__name__)
 app.secret_key = secrets.token_urlsafe(32)
+generator = gen(init_praw('cityporn', 10000))
 
 #Praw Init
 def init_praw(s,n):
@@ -78,14 +79,11 @@ def index():
     try:
         if request.method == 'POST':
             check_answer(request.form['content'])
-            nextgen = next(generator)
-            session['a'] = nextgen
+            session['a'] = next(generator)
             return render_template('index.html', session=session)
         else:
             session['player'] = jsons.dump(PlayerScore())
-            generator = gen(init_praw('cityporn', 10000))
-            nextgen = next(generator)
-            session['a'] = nextgen
+            session['a'] = next(generator)
             return render_template('index.html', session=session)
     except ValueError:
         pass
