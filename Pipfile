@@ -12,8 +12,9 @@ unidecode = "*"
 jsons = "*"
 pillow = "*"
 gunicorn = "*"
-praw = "*"
 spacy = "*"
+praw = "*"
+
 
 [requires]
 python_version = "3.8"
