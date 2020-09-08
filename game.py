@@ -53,8 +53,8 @@ def gen(top_posts):
                 width, height = img.size
                 obj = QuizObj(submission.url, width/height, get_city_name(submission.title), submission.title)
                 yield jsons.dump(obj)
-            except:
-                pass
+            except StopIteration as e:
+                print(e)
 	
 generator = gen(init_praw('cityporn', 10000))
 
