@@ -9,7 +9,6 @@ import requests, time, secrets, unidecode, jsons, spacy
 # Flask Init
 app = Flask(__name__)
 app.secret_key = secrets.token_urlsafe(32)
-generator = gen(init_praw('cityporn', 10000))
 
 #Praw Init
 def init_praw(s,n):
@@ -56,6 +55,8 @@ def gen(top_posts):
                 yield jsons.dump(obj)
             except:
                 pass
+	
+generator = gen(init_praw('cityporn', 10000))
 
 #Check Guess and Update Player Scores
 def check_answer(guess):
