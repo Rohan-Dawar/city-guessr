@@ -13,7 +13,9 @@ jsons = "*"
 pillow = "*"
 gunicorn = "*"
 praw = "*"
-spacy = {extras = ["en-core-web-sm"], version = "*"}
+setuptools = "*"
+spacy = "*"
+en-core-web-sm = "*"
 
 [requires]
 python_version = "3.8"
