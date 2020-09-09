@@ -14,7 +14,7 @@ pillow = "*"
 gunicorn = "*"
 praw = "*"
 setuptools = "*"
-spacy = "*"
+spacy = {extras = ["en_core_web_sm"], version = "*"}
 
 [requires]
 python_version = "3.8"

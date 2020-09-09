@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ed7fc3567b3cfda0b93e37fe83fe8986f4a1c6fdd27ef2c850d209e61441ee4e"
+            "sha256": "0e5cb6c0dd20a9201fe105cac2f5652da06af81c20ed5658f3272500d7f53c7e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -318,6 +318,9 @@
             "version": "==1.15.0"
         },
         "spacy": {
+            "extras": [
+                "en_core_web_sm"
+            ],
             "hashes": [
                 "sha256:0f5d088c1d2a1fcf247090854927cd0ba4e28266323af112dead20ff020ded1c",
                 "sha256:11b9517cdcbea166a9461093821d12bf632aea7dd14b6e3c549871903bda41b8",
