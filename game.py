@@ -5,8 +5,8 @@ from io import BytesIO
 from check_ag_lists import check_name
 from prawKeysOG import reddit
 import requests, time, secrets, unidecode, jsons
-import spacy
-#import en_core_web_sm
+#import spacy
+import en_core_web_sm
 
 # Flask Init
 app = Flask(__name__)
@@ -34,7 +34,7 @@ class QuizObj:
 
 #Return City Name From Post Title:
 def get_city_name(title):
-    nlp = spacy.load('en_core_web_sm')
+    nlp = en_core_web_sm.load()
     doc = nlp(title)
     gpe = [ent.text for ent in doc.ents]
     for parse in gpe:
