@@ -32,7 +32,7 @@ class QuizObj:
 
 #Return City Name From Post Title:
 def get_city_name(title):
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("en-core-web-sm")
     doc = nlp(title)
     gpe = [ent.text for ent in doc.ents]
     for parse in gpe:
