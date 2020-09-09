@@ -15,7 +15,6 @@ gunicorn = "*"
 praw = "*"
 setuptools = "*"
 spacy = "*"
-en-core-web-sm = "*"
 
 [requires]
 python_version = "3.8"
