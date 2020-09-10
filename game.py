@@ -6,7 +6,7 @@ from check_ag_lists import check_name
 from prawKeysOG import reddit
 import requests, time, secrets, unidecode, jsons
 #import spacy
-import spacy[en_core_web_sm] as en_core_web_sm
+import spacy.en_core_web_sm as en_core_web_sm
 
 # Flask Init
 app = Flask(__name__)
