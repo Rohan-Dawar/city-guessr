@@ -7,7 +7,7 @@ A game in which you must guess what city you are being shown!
 1. [Create a Reddit API Account](https://www.reddit.com/dev/api/)
 2. Add your Reddit API Account Details to prawKeys.py
 3. Run game.py
-4. On your browser, navigate to your [localhost with port 5000](localhost:5000/)
+4. On your browser, navigate to your [localhost with port 5000](https://www.localhost:5000/)
 
 ### Prerequisites
 
