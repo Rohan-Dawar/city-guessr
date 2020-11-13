@@ -7,7 +7,7 @@ A game in which you must guess what city you are being shown!
 1. [Create a Reddit API Account](https://www.reddit.com/dev/api/)
 2. Add your Reddit API Account Details to prawKeys.py
 3. Run game.py
-4. On your browser, navigate to your localhost with port 5000: localhost:5000
+4. In your browser, navigate to your localhost with port 5000: localhost:5000
 
 ### Prerequisites
 
@@ -44,5 +44,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Inspiration: [GeoGuessr](https://www.geoguessr.com/) and [City Guesser](https://virtualvacation.us/guess)
 * README.md template from [PurpleBooth](https://github.com/PurpleBooth)
-* etc
-
