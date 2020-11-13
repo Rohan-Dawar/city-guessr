@@ -19,6 +19,7 @@ To run game.py you will need [Pyhton 3.0+](https://www.python.org/) installed.
 - Type in the entry field your guess for what city it is
   - abbreviations **should** work ie. 'nyc' for 'New York City'
   - capitalizations do not matter, guesses and answers are not case-sensitive
+  - accented symbols **should not** matter: eg. Montreal == Montréal
 - Submit your guess and you will be greeted with the next picture, the previous round's outcome, and an updated scoreboard!
 
 ## Deployment
